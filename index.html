@@ -1,14 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
-	<h1>make me your own!</h1>
-	<script src="index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation SoSe24</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+	<nav>
+        <header>
+            <a href="index.html">Home</a>
+            <label for="nav"><i class="fas fa-bars"></i></label>
+        </header>
+        <input type="checkbox" id="nav" hidden />
+        <div class="links-container">
+            <a href="https://art-movement-recogtition.netlify.app">Teachable Machine</a>
+            <a href="https://dreams-translate.netlify.app">LLM</a>
+            <a href="https://generativeai-ft-shrek.netlify.app">Generative Story</a>
+        </div>
+    </nav>
+
+	<div class="spacer"></div>
+
+    <main>
+      <h1>Documentation SoSe24</h1>
+
+	<!-- <ul class="menu">
+		<li><a href="#">Introduction</a></li>
+		<li><a href="#TM">Teachable Machine</a></li>
+		<li><a href="#LLM">LLM</a></li>
+		<li><a href="#GS">Generative Story</a></li>
+	</ul> -->
+
+	
+	  <section container>
+		
+		<p>
+			Hello World! My name is <b>Maryia Kukharenka</b>. I want to present to
+			you my first steps in programming that I made in the
+			Digital Communication
+			classes.
+		</p>
+		<h6>So what did i learn?</h6>
+		<p>
+			Obviously, I started by coding simple grapfic images. It reminded me on
+			drawing small geometric illustrations in paint.exe on the old Windows 98
+			in my childhood. Just like when I moved from coloring outlined
+			characters to creating my own projects, now with each code I found out
+			more and more subtleties of the programming languages I was learning.
+			During the semester:
+		</p>
+
+		<ul>
+			<li>
+				I've got familiar with 4 programming languages, namely
+				<b>JavaScript, HTML, CSS and C++</b>.
+			</li>
+			<li>
+				I took a glance at <b>phisical building</b> and computer
+				<b>hardware.</b>
+			</li>
+			<li>
+				Working on our final group project, I experienced on myself the role
+				of a <b>frontend developer</b>.
+			</li>
+		</ul>
+		<p>Well, now I offer you to take a closer look at some of my projects:</p>
+	</section>
+
+	<!-- <div class="spacer" id="TM"></div> -->
+
+      <h2>Teachable Machine</h2>
+
+      <div class="row">
+        <figure>
+          <p>Welcome to our webpage! We are a group of students from Braunschweig
+            University of Art, and we are excited to present to you our project on
+            Generative AI.</p>
+        </figure>
+        <figure>
+          <p>Welcome to our webpage! We are a group of students from Braunschweig
+            University of Art, and we are excited to present to you our project on
+            Generative AI.</p>
+        </figure>
+
+      </div>
+
+	  <section container>
+		<a href="https://art-movement-recogtition.netlify.app" class="button-link">
+			<button>Try "Art movement recognition"</button>
+		</a>
+	</section>
+
+	<!-- <div class="spacer" id="LLM"></div> -->
+
+	  <h2>LLM</h2>
+
+      <div class="row">
+        <figure>
+          <p>Welcome to our webpage! We are a group of students from Braunschweig
+            University of Art, and we are excited to present to you our project on
+            Generative AI.</p>
+        </figure>
+        <figure>
+          <p>Welcome to our webpage! We are a group of students from Braunschweig
+            University of Art, and we are excited to present to you our project on
+            Generative AI.</p>
+        </figure>
+		
+      </div>
+<section container>
+			<a href="https://dreams-translate.netlify.app" class="button-link">
+				<button>Try "Dreams translator"</button>
+			</a>
+		</section>
+
+		<!-- <div class="spacer" id="GS"></div> -->
+
+	  <h2>Generative Story</h2>
+
+      <div class="row">
+        <figure>
+          <p>Welcome to our webpage! We are a group of students from Braunschweig
+            University of Art, and we are excited to present to you our project on
+            Generative AI.</p>
+        </figure>
+        <figure>
+          <p>Welcome to our webpage! We are a group of students from Braunschweig
+            University of Art, and we are excited to present to you our project on
+            Generative AI.</p>
+        </figure>
+		
+      </div>
+<section container>
+			<a href="https://generativeai-ft-shrek.netlify.app" class="button-link">
+				<button>Read "Generative Shrek-AI"</button>
+			</a>
+		</section>
+	  
+      <footer>
+        <small
+          >created with 🩷 by
+          <a href="https://github.com/donomoria">@donomoria</a>
+          </small
+        >
+      </footer>
+    </main>
+
+    <script>
+		document.addEventListener('DOMContentLoaded', () => {
+		  const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach(entry => {
+			  if (entry.isIntersecting) {
+				entry.target.classList.add('visible');
+				observer.unobserve(entry.target);
+			  }
+			});
+		  });
+		
+		  // Select all text elements you want to apply the effect to
+		  const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, ul, figure, button, section container, figcaption, .text-container');
+		  elements.forEach(el => {
+			el.classList.add('hidden');
+			observer.observe(el);
+		  });
+		});
+		</script>
+		
+
+  </body>
 </html>

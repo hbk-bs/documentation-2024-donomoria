@@ -1,17 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* General Resets and Global Styles */
 * {
-  font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa,
-    Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri,
-    source-sans-pro, sans-serif;
-  font-weight: bold;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
 }
+
+html {
+  font-size: 18px;
+}
+
 body {
-  margin: 0 auto;
-  width: 50vw;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
   height: 100vh;
+}
+.spacer {
+  height: 2em;
+}
+
+/* Navigation Styles */
+nav {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 1rem; /* Add padding to the sides of the nav */
+}
+
+nav header {
+  display: flex;
+  align-items: center; /* Center items vertically within header */
+  width: 100%;
+  justify-content: space-between; /* Space between home link and links container */
+}
+
+nav header a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: color 0.3s ease;
+}
+
+nav header a:hover {
+  color: transparent;
+  background: linear-gradient(90deg, #00ffff, #3c78fa, #5c2aff, #b732ff, #ff3a9c);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+nav label {
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+nav input[type="checkbox"] {
+  display: none; /* Hide the checkbox */
+}
+
+nav input[type="checkbox"]:checked + .links-container {
+  display: block;
+}
+
+.links-container {
+  display: flex;
+  gap: 2rem; /* Space between links */
+  margin-left: auto; /* Push links to the right */
+  align-items: center; /* Align links vertically center */
+}
+
+.links-container a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: color 0.3s ease;
+}
+
+.links-container a:hover {
+  color: transparent;
+  background: linear-gradient(90deg, #00ffff, #3c78fa, #5c2aff, #b732ff, #ff3a9c);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Heading Styles */
+:root {
+  --gradient-color1: #00ffff;
+  --gradient-color2: #3c78fa;
+  --gradient-color3: #5c2aff;
+  --gradient-color4: #b732ff;
+  --gradient-color5: #ff3a9c;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    var(--gradient-color1),
+    var(--gradient-color2),
+    var(--gradient-color3),
+    var(--gradient-color4),
+    var(--gradient-color5)
+  );
+  background-size: 400% 400%;
+  color: transparent;
+  display: inline-block;
+  animation: animateGradient 4s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    var(--gradient-color1),
+    var(--gradient-color2),
+    var(--gradient-color3),
+    var(--gradient-color4),
+    var(--gradient-color5)
+  );
+  background-size: 400% 400%;
+  color: transparent;
+  display: inline-block;
+  animation: animateGradient 4s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+@keyframes animateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+/* Layout and Container Styles */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 60vw;
+  margin: 0 auto;
+  gap: 1rem;
+  max-width: 1024px;
+}
+
+figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.row,
+.column {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.last-item {
+  margin-top: auto;
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+}
+
+footer {
+  padding-top: 5em;
+  margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  main {
+    width: 90vw;
+  }
+  .locations-container {
+    flex-direction: column;
+  }
+  .facts {
+    width: 100%;
+  }
+}
+
+section[container] {
+  display: flex;
+  flex-direction: column;
+  max-width: 95vw;
+  margin: auto;
+  padding: 5px;
+}
+
+#container {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-h1 {
-  font-size: 5vw;
+
+.button-link {
+  text-decoration: none;
+    display: flex;               /* Enable Flexbox */
+    justify-content: center;     /* Center horizontally */
+    align-items: center;         /* Center vertically */            /* Full viewport height, adjust as needed */
+}
+
+button {
+  padding: 20px;
+  background: linear-gradient(
+    45deg,
+    var(--gradient-color1),
+    var(--gradient-color2),
+    var(--gradient-color3),
+    var(--gradient-color4),
+    var(--gradient-color5)
+  ); /* Ensure the gradient is visible on hover */
+  background-size: 400% 400%; /* Ensure the gradient covers the button */
+  color: #ffffff; /* Text color for readability *//* Hide text color to show gradient */
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease-out; /* Smooth transition for background and transform */
+  animation: animateGradient 4s ease infinite; /* Apply the gradient animation */
+}
+
+button:hover {
+  background: linear-gradient(
+    45deg,
+    var(--gradient-color1),
+    var(--gradient-color2),
+    var(--gradient-color3),
+    var(--gradient-color4),
+    var(--gradient-color5)
+  ); /* Ensure the gradient is visible on hover */
+  background-size: 400% 400%; /* Ensure the gradient covers the button */
+  color: #ffffff; /* Text color for readability */
+  transform: scale(1.05); /* Slightly scale up the button on hover */
+}
+/* Animation for hidden/visible elements */
+.hidden {
+  opacity: 0;
+  transform: translateY(60px); /* Optional: Slight downward movement */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
