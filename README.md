@@ -5,4 +5,4 @@ Contents
 - [ ] Introduction
 - [ ] Teachable Machine
 - [ ] LLM
-- [ ] Generative Story
+- [ ] Generative Story generativeai-ft-shrek.netlify.app
