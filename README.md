@@ -5,4 +5,4 @@ Contents
 - [ ] Introduction
 - [ ] Teachable Machine
 - [ ] LLM
-- [ ] Generative Story
+- [ ] Generative Story 
