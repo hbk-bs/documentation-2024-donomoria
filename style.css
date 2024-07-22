@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-/* General Resets and Global Styles */
+
 * {
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
@@ -22,25 +22,25 @@ body {
   height: 2em;
 }
 
-/* Navigation Styles */
-nav {
+
+/* nav {
   font-family: "Ubuntu", sans-serif;
   background-color: #000000;
   color: #ffffff;
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center; 
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  padding: 0 1rem; /* Add padding to the sides of the nav */
+  padding: 0 1rem; 
 }
 
 nav header {
   display: flex;
-  align-items: center; /* Center items vertically within header */
+  align-items: center; 
   width: 100%;
-  justify-content: space-between; /* Space between home link and links container */
+  justify-content: space-between; 
 }
 
 nav header a {
@@ -63,7 +63,7 @@ nav label {
 }
 
 nav input[type="checkbox"] {
-  display: none; /* Hide the checkbox */
+  display: none; 
 }
 
 nav input[type="checkbox"]:checked + .links-container {
@@ -72,9 +72,9 @@ nav input[type="checkbox"]:checked + .links-container {
 
 .links-container {
   display: flex;
-  gap: 2rem; /* Space between links */
-  margin-left: auto; /* Push links to the right */
-  align-items: center; /* Align links vertically center */
+  gap: 2rem; 
+  margin-left: auto; 
+  align-items: center; 
 }
 
 .links-container a {
@@ -88,9 +88,9 @@ nav input[type="checkbox"]:checked + .links-container {
   background: linear-gradient(90deg, #00ffff, #3c78fa, #5c2aff, #b732ff, #ff3a9c);
   -webkit-background-clip: text;
   background-clip: text;
-}
+} */
 
-/* Heading Styles */
+
 :root {
   --gradient-color1: #00ffff;
   --gradient-color2: #3c78fa;
@@ -155,7 +155,7 @@ h4 { font-size: 1.5em; }
 h5 { font-size: 1.25em; }
 h6 { font-size: 1em; }
 
-/* Layout and Container Styles */
+
 main {
   display: flex;
   flex-direction: column;
@@ -176,10 +176,10 @@ figure {
   gap: 0.25rem;
 }
 
-img {
+/* img {
   max-width: 100%;
   height: auto;
-}
+} */
 
 figcaption {
   font-size: 0.9rem;
@@ -237,7 +237,7 @@ footer {
   padding-bottom: 3rem;
 }
 
-/* Responsive Design */
+
 @media screen and (max-width: 768px) {
   main {
     width: 90vw;
@@ -267,9 +267,9 @@ section[container] {
 
 .button-link {
   text-decoration: none;
-    display: flex;               /* Enable Flexbox */
-    justify-content: center;     /* Center horizontally */
-    align-items: center;         /* Center vertically */            /* Full viewport height, adjust as needed */
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
 }
 
 button {
@@ -281,15 +281,15 @@ button {
     var(--gradient-color3),
     var(--gradient-color4),
     var(--gradient-color5)
-  ); /* Ensure the gradient is visible on hover */
-  background-size: 400% 400%; /* Ensure the gradient covers the button */
-  color: #ffffff; /* Text color for readability *//* Hide text color to show gradient */
+  ); 
+  background-size: 400% 400%; 
+  color: #ffffff; 
   border: none;
   border-radius: 20px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease-out; /* Smooth transition for background and transform */
-  animation: animateGradient 4s ease infinite; /* Apply the gradient animation */
+  transition: background 0.3s ease, transform 0.2s ease-out; 
+  animation: animateGradient 4s ease infinite; 
 }
 
 button:hover {
@@ -300,19 +300,87 @@ button:hover {
     var(--gradient-color3),
     var(--gradient-color4),
     var(--gradient-color5)
-  ); /* Ensure the gradient is visible on hover */
-  background-size: 400% 400%; /* Ensure the gradient covers the button */
-  color: #ffffff; /* Text color for readability */
-  transform: scale(1.05); /* Slightly scale up the button on hover */
+  ); 
+  background-size: 400% 400%; 
+  color: #ffffff; 
+  transform: scale(1.05); 
 }
-/* Animation for hidden/visible elements */
+
 .hidden {
   opacity: 0;
-  transform: translateY(60px); /* Optional: Slight downward movement */
+  transform: translateY(60px); 
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+ul.menu {
+  list-style-type: none; 
+  margin: 0;             
+  padding: 0;            
+  display: flex;         
+  flex-direction: column; 
+  align-items: flex-start; 
+  position: fixed;       
+  top: 0;               
+  left: 0;               
+  height: 100%;          
+  background-color: #f9f9f9; 
+  padding-top: 1em;      
+  width: 200px;          
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+ul.menu .menu-heading {
+  font-size: 1.5rem;      
+  font-weight: bold;      
+  padding: 0.5em 1em;     
+  width: 100%;            
+  background-color: #000; 
+  color: #fff;            
+  text-align: left;  
+  border-radius: 5px;   
+}
+
+
+ul.menu li {
+  width: 100%;           
+}
+
+
+ul.menu li a {
+  text-decoration: none; 
+  color: #000;           
+  font-size: 1rem;       
+  padding: 0.5em 1em;    
+  display: block;        
+  transition: color 0.3s ease, background-color 0.3s ease; 
+}
+
+
+ul.menu li a:hover {
+  color: #ffffff;       
+  background: linear-gradient(90deg, var(--gradient-color1), var(--gradient-color2), var(--gradient-color3), var(--gradient-color4), var(--gradient-color5));
+  border-radius: 5px;    
+  background-size: 400% 400%; 
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease-out; 
+  animation: animateGradient 4s ease infinite; 
+}
+
+
+@media screen and (max-width: 768px) {
+  ul.menu {
+    width: 100%; 
+    height: auto; 
+    position: relative; 
+    top: 0;
+    left: 0;
+  }
 }

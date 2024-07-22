@@ -8,7 +8,7 @@
   </head>
 
   <body>
-	<nav>
+<!-- 	<nav>
         <header>
             <a href="index.html">Home</a>
             <label for="nav"><i class="fas fa-bars"></i></label>
@@ -21,17 +21,19 @@
         </div>
     </nav>
 
-	<div class="spacer"></div>
+	<div class="spacer"></div> -->
 
     <main>
       <h1>Documentation SoSe24</h1>
 
-	<!-- <ul class="menu">
+	  <ul class="menu">
+		<li class="menu-heading">Quick navigation</li>
 		<li><a href="#">Introduction</a></li>
 		<li><a href="#TM">Teachable Machine</a></li>
 		<li><a href="#LLM">LLM</a></li>
 		<li><a href="#GS">Generative Story</a></li>
-	</ul> -->
+	</ul>
+	
 
 	
 	  <section container>
@@ -69,9 +71,9 @@
 		<p>Well, now I offer you to take a closer look at some of my projects:</p>
 	</section>
 
-	<!-- <div class="spacer" id="TM"></div> -->
+	<!-- <div class="spacer" ></div> -->
 
-      <h2>Teachable Machine</h2>
+      <h2 id="TM">Teachable Machine</h2>
 
       <div class="row">
         <figure>
@@ -93,9 +95,9 @@
 		</a>
 	</section>
 
-	<!-- <div class="spacer" id="LLM"></div> -->
+	<!-- <div class="spacer" ></div> -->
 
-	  <h2>LLM</h2>
+	  <h2 id="LLM">LLM</h2>
 
       <div class="row">
         <figure>
@@ -116,9 +118,9 @@
 			</a>
 		</section>
 
-		<!-- <div class="spacer" id="GS"></div> -->
+		<!-- <div class="spacer" ></div> -->
 
-	  <h2>Generative Story</h2>
+	  <h2 id="GS">Generative Story</h2>
 
       <div class="row">
         <figure>
@@ -159,7 +161,7 @@
 			});
 		  });
 		
-		  // Select all text elements you want to apply the effect to
+		  
 		  const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, ul, figure, button, section container, figcaption, .text-container');
 		  elements.forEach(el => {
 			el.classList.add('hidden');
