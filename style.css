@@ -266,6 +266,9 @@ footer {
 
 
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
   main {
     width: 90vw;
   }
