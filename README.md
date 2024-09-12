@@ -1,3 +1,8 @@
-# DON'T FORGET THE README! Explain what I will find here. Link your projects!
+## Grundlagen der digitalen Kommunikation. Documentation SoSe24. Maryia Kukharenka.
 
-- DONT FORGET THE LICENSE!
+Contents
+
+- [ ] Introduction
+- [ ] Teachable Machine
+- [ ] LLM
+- [ ] Generative Story 
